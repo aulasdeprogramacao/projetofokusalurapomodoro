@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Check</title>
+<style>
+
+:root {
+    --color-primary: #123456;
+    --color-secondary: #FFF;
+    --azul-royal: #144480;
+    --fundo-card-timer: rgba(20, 68, 128, 0.30);
+    --lils: #4b197e;
+    --linear-botes: linear-gradient(180deg, #B872FF 0%, #144480 100%);
+}
+
+/* toggle */
+
+.toggle {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.toggle-switch {
+    display: inline-block;
+    background: #ccc;
+    border-radius: 1.6rem;
+    width: 5rem;
+    height: 2.4rem;
+    position: relative;
+    vertical-align: middle;
+    transition: background 0.25s;
+}
+
+.toggle-switch:before, .toggle-switch:after {
+    content: "";
+}
+
+.toggle-switch:before {
+    display: block;
+    background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    top: 0.4rem;
+    left: 0.4rem;
+    transition: left 0.25s;
+}
+
+.toggle:hover .toggle-switch:before {
+    background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+}
+
+.toggle-checkbox:checked + .toggle-switch {
+    background: var(--lils);
+}
+
+.toggle-checkbox:checked + .toggle-switch:before {
+    left: 3rem;
+}
+
+.toggle-checkbox {
+    position: absolute;
+    visibility: hidden;
+}
+
+/* fim - toggle */
+
+</style>
+</head>
+<body>
+    <label class="toggle">
+      <input class="toggle-checkbox" type="checkbox" id="alternar-musica">
+      <div class="toggle-switch"></div>
+    </label>
+</body>
+</html>
